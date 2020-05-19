@@ -1,0 +1,22 @@
+<?php include './header.phtml'; ?>
+<h1>Supprimer une tache</h1>
+    <form action="./suppTacheTodo.php" method="post">
+        <div>
+            <label for="tache">Tache : </label>
+            <select name="tache" id="tache">
+                <?php echo $opt; ?>
+            </select>
+        </div>
+        <div>           
+            <div></div>
+            <input type="submit" value="Supprimer">
+            <div></div>
+        </div>
+</form>
+<?php
+    if($ret!="")
+    {
+        echo '<h2>'.$ret.'</h2>';
+    }
+?>
+<?php include './footer.phtml'; ?>

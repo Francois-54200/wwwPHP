@@ -1,0 +1,39 @@
+<?php include './header.phtml'; ?>
+        <h1>Ajouter une tache</h1>
+    <form action="./ajoutTacheTodo.php" method="post">
+        <div>
+            <label for="titre">Titre : </label>
+            <input type="text" name="titre" id="titre" />
+        </div>
+        <div>
+            <label for="desc">Description : </label>
+            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="date">Date : </label>
+            <input type="date" name="date" id="date" />
+        </div>
+        <div>
+            <label for="prio">Priorité : </label>
+            <select name="prio" id="prio">
+                <option value="1">très haute</option>
+                <option value="2">haute</option>
+                <option value="3" selected="selected">normale</option>
+                <option value="4">basse</option>
+                <option value="5">très basse</option>
+            </select>
+        </div>
+        <div>
+            <div></div>
+            <input type="submit" value="Ajouter">
+            <div></div>
+        </div>
+    </form>
+
+    <?php
+        if($ret!="")
+        {
+            echo '<h2>'.$ret.'</h2>';
+        }
+    ?>
+<?php include './footer.phtml'; ?>

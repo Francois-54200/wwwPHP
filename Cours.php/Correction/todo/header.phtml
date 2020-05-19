@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $titlePage; ?></title>
+    <?php
+        foreach($tabCss as $unCss)
+        {
+           echo '  <link rel="stylesheet" href="'.$unCss.'">' ;
+        }
+    ?>
+</head>
+<body>
+<?php include './navbar.phtml'; ?>
+<div class="contener">
