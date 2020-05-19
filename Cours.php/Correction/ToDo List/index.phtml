@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>List all tasks - ToDo List</title>
+		<?php include 'stylesheet.phtml'; ?>
+	</head>
+	<body>
+		<?php include 'navigation.phtml'; ?>
+		<div class="container">
+			<h1>List all tasks</h1>
+
+			<?php if(count($tasks) >= 1): ?>
+				<table>
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Description</th>
+							<th>Date</th>
+							<th>Priority</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($tasks as $task): ?>
+							<tr>
+								<?php foreach($task as $fieldValue): ?>
+									<td><?= $fieldValue ?></td>
+								<?php endforeach; ?>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+			<?php else: ?>
+				<p class="message">
+					No task.
+				</p>
+			<?php endif; ?>
+
+		</div>
+	</body>
+</html>

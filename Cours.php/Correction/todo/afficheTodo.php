@@ -1,8 +1,8 @@
 <?php
-    $handle = fopen("monfich.csv", "r");
+    $handle = fopen("monfich.csv", "r");  //permet d'aller chercher et ouvrir le fichier CSV en lecture seul
     $paire =true;
     $tabAffich ="";
-    while($line = fgetcsv($handle))
+    while($line = fgetcsv($handle))  // permet de récupérer une ligne CSV (et passe a la suivante)
     {
         if($paire)
         {

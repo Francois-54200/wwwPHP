@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Remove a task - ToDo List</title>
+		<?php include 'stylesheet.phtml'; ?>
+	</head>
+	<body>
+		<?php include 'navigation.phtml'; ?>
+		<div class="container">
+			<h1>Remove a task</h1>
+
+			<?php if(isset($taskRemoved)): ?>
+				<?php if($taskRemoved): ?>
+					<p class="message success">
+						Task removed !
+					</p>
+				<?php else: ?>
+					<p class="message error">
+						Error removing task.
+					</p>
+				<?php endif; ?>
+			<?php endif; ?>
+
+			<?php if(count($tasks) >= 1): ?>
+				<form action="remove.php" method="post">
+					<label for="line">Line to delete</label>
+					<select id="line" name="taskIndex">
+						<?php foreach($tasks as $taskIndex => $task): ?>
+							<option value="<?= $taskIndex ?>"><?= implode(' - ', $task); ?></option>
+						<?php endforeach; ?>
+					</select>
+					<input type="submit" value="Supprimer">
+				</form>
+			<?php else: ?>
+				<p class="message info">
+					No task.
+				</p>
+			<?php endif; ?>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Add a task - ToDo List</title>
+		<?php include 'stylesheet.phtml'; ?>
+	</head>
+	<body>
+		<?php include 'navigation.phtml'; ?>
+		<div class="container">
+		    <h1>Add a task</h1>
+
+			<?php if(isset($taskAdded)): ?>
+			    <?php if($taskAdded): ?>
+			        <p class="message">
+			        	New task added !
+			        </p>
+			    <?php else: ?>
+			        <p class="message">
+			        	Error adding task.
+			       	</p>
+			    <?php endif; ?>
+		    <?php endif; ?>
+
+		    <form action="" method="post">
+		        <div>
+		        	<label for="title">Title</label>
+		        	<input type="text" name="title" id="title" placeholder="Title">
+		        </div>
+		        <div>
+		        	<label for="description">Description</label>
+		        	<textarea name="description" id="description" placeholder="Description" rows="4"></textarea>
+		        </div>
+		        <div>
+		        	<label for="date">Date</label>
+		        	<input type="date" name="date" id="date">
+		        </div>
+		        <div>
+		        	<label for="priority">Priority</label>
+		        	<select name="priority" id="priority">
+		                <option value="Critical">Critical</option>
+		                <option value="High">High</option>
+		                <option value="Medium">Medium</option>
+		                <option value="Trivial">Trivial</option>
+		            </select>
+		        </div>
+		        <div>
+		            <input type="submit" value="Add">
+		        </div>
+		    </form>
+		</div>
+	</body>
+</html>

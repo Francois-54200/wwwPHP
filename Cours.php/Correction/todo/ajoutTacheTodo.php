@@ -1,6 +1,6 @@
 <?php
 $ret = "";
-if(isset($_POST["titre"]))
+if(isset($_POST["titre"]))  //isset signifie obligatoirement rempli
 {
     $montab = [$_POST["titre"],$_POST["desc"],$_POST["date"],$_POST["prio"]];
     $handle = fopen("monfich.csv", "a+");
