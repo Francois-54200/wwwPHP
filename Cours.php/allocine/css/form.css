@@ -1,0 +1,33 @@
+.contener {
+    width:90%;
+    margin:0 auto;
+    
+}
+.contener>h1 {
+    width:90%;
+    margin:0 auto;
+    text-align: center;
+    
+}
+.contener>form {
+    width:60%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+.contener>form>div {
+    width:90%;
+    margin:10px auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+.contener>form>div>input,.contener>form>div>textarea,.contener>form>div>select {
+    width:60%;
+}
+.contener>form>div>label {
+    width:30%;
+}

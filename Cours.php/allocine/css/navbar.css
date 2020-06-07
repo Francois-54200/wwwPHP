@@ -1,0 +1,45 @@
+* {
+    margin:0;
+    padding:0;
+    color:black;
+    font-family: Arial,Sans-Serif;
+  }
+  nav {
+    position :fixed;
+    top:0px;
+    width:100%;
+    background-color:#fecc00;
+    display:flex;
+    justify-content : space-between;
+  }
+  nav h1{
+    margin: 10px;
+  }
+  
+  #mesLiensNav {
+    display:flex;
+    list-style:none;
+  }
+  #mesLiensNav li{
+    padding: 3px;
+    margin:10px;
+  }
+  #mesLiensNav li a{
+    color:black;
+    text-decoration:none;
+  }
+  .contener:target {
+    padding-top: 48px; 
+    margin-top: -48px; 
+}
+
+.contener
+{
+  margin-top: 48px; 
+}
+  
+  #mesLiensNav li:hover, #mesLiensNav li a:hover{
+    color:lightseagreen;
+    text-decoration:none;
+    background-color:black;
+  }

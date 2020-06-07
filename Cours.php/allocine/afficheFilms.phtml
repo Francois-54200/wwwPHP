@@ -1,0 +1,17 @@
+<?php include './header.phtml'; ?>
+<h1>Mes films</h1>
+<div class="contFilm">
+<?php
+foreach($mesFilms as $unFilm)
+{
+ echo '   <div>';
+ echo ' <img src="'.$unFilm["img"].'" alt="">';
+ echo '    <p class="dateSortie">'.$unFilm["date"].'</p>';
+ echo '    <h2>'.$unFilm["titre"].'</h2>';
+ echo '    <p class="desc">'.$unFilm["desc"].'</p>';
+ echo ' </div>';
+    //include './unFilm.phtml';
+}
+?>
+</div>
+<?php include './footer.phtml'; ?>

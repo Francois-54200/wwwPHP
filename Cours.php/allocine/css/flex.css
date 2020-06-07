@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+.contFilm {
+    display:flex;
+    width:80%;
+    margin:0 auto;
+    
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.contFilm>*{
+    width:300px;
+    border:solid black 1px;
+    border-radius:10px;
+    margin:10px;
+    padding:5px;
+}
+.contFilm>*>img {
+    width:100%;
+}
+.dateSortie {
+    float: right;
+}
+
+.desc {
+    margin-top:5px;
+    height: 300px;
+    overflow-y: scroll;
+}
